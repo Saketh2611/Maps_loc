@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nearest-resident-cli"
+version = "0.1.0"
+description = "Find nearby residential addresses from latitude and longitude."
+requires-python = ">=3.8"
+dependencies = [
+    "python-dotenv",
+    "requests",
+]
+
+[project.scripts]
+nearest = "nearest_loc:main"
+
+[tool.setuptools]
+py-modules = ["nearest_loc"]
